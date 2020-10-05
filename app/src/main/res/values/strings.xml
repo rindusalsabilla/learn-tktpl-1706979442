@@ -1,7 +1,4 @@
 <resources>
-    <string name="app_name">My Project</string>
-    <string name="welcome">Welcome to My First Android Studio Project!</string>
-    <string name="value">0</string>
-    <string name="toast">Motivation</string>
+    <string name="app_name">Timer</string>\
 
 </resources>
