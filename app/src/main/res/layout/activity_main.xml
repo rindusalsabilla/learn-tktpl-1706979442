@@ -4,28 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="1:00"
+        android:textColor="#FFFFFF"
+        android:textSize="70sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405" />
+        app:layout_constraintVertical_bias="0.318" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="17dp"
-        android:text="@string/welcome"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_play"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="440dp"
+        android:clickable="true"
+        app:backgroundTint="#D81B60"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_play" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_pause"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginLeft="176dp"
+        android:layout_marginTop="440dp"
+        android:clickable="true"
+        app:backgroundTint="#D81B60"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_pause" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_stop"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginLeft="284dp"
+        android:layout_marginTop="440dp"
+        android:clickable="true"
+        app:backgroundTint="#D81B60"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_stop" />
+
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.MaterialProgressBar.ProgressBar"
+        android:layout_width="319dp"
+        android:layout_height="319dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
