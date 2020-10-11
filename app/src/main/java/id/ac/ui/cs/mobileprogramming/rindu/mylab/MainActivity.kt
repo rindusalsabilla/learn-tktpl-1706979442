@@ -7,14 +7,14 @@ import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
 
-    private val taskListFragment = TaskListFragment()
+    private val taskListFragment = BuildingListFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportFragmentManager.beginTransaction()
             .add(R.id.container, taskListFragment)
-            .addToBackStack("task_list")
+            .addToBackStack("building_list")
             .commit()
     }
 }

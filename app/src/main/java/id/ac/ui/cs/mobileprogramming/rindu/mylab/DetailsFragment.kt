@@ -27,8 +27,8 @@ class DetailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val viewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
         viewModel.selected.observe(viewLifecycleOwner, Observer { item ->
-            binding!!.day.text = item.day
-            binding!!.task.text = item.task
+            binding!!.day.text = item.building
+            binding!!.task.text = item.location
             binding!!.details.text = item.details
         })
     }

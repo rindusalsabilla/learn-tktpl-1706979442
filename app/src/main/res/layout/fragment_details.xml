@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -12,17 +12,17 @@
             android:id="@+id/day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:textColor="@color/colorAccent"
-            tools:text="Monday"/>
+            android:textColor="#26773F"
+            android:textSize="30sp"
+            tools:text="Tembok Besar China" />
 
         <TextView
             android:id="@+id/task"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="21sp"
             android:textColor="@android:color/black"
-            tools:text="Study sorting algorithms"/>
+            android:textSize="21sp"
+            tools:text="Lokasi: Cina" />
 
         <TextView
             android:id="@+id/details"

@@ -4,10 +4,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
-import id.ac.ui.cs.mobileprogramming.rindu.mylab.databinding.TaskListItemBinding
+import id.ac.ui.cs.mobileprogramming.rindu.mylab.databinding.BuildingListItemBinding
 
-class RecyclerViewAdapter(private val list: List<Item>) :
+
+class RecyclerViewAdapter(
+    private val list: List<Item>,
+    private val viewModel: SharedViewModel) :
     RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
     private var listener: OnItemClickListener? = null
 
@@ -15,19 +19,12 @@ class RecyclerViewAdapter(private val list: List<Item>) :
         fun onClick(view: View, position: Int)
     }
 
-    fun setListener(listener: OnItemClickListener) {
-        this.listener = listener
-    }
-
-    fun getItemAt(position: Int): Item {
-        return list[position]
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val binding = DataBindingUtil.inflate<TaskListItemBinding>(
+        val binding = DataBindingUtil.inflate<BuildingListItemBinding>(
             inflater,
-            R.layout.task_list_item,
+            R.layout.building_list_item,
             parent,
             false
         )
@@ -35,10 +32,15 @@ class RecyclerViewAdapter(private val list: List<Item>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.binding.day.text = list[position].day
-        holder.binding.task.text = list[position].task
+        val item = list[position]
+        holder.binding.day.text = list[position].building
+        holder.binding.task.text = list[position].location
         holder.binding.taskListItem.setOnClickListener{
-
+            (holder.itemView.context as FragmentActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.container, DetailsFragment())
+                .addToBackStack(null)
+                .commit()
+            viewModel.setSelected(item)
         }
 
 
@@ -49,10 +51,8 @@ class RecyclerViewAdapter(private val list: List<Item>) :
     }
 
 
-    inner class ViewHolder( val binding: TaskListItemBinding) :
+    inner class ViewHolder( val binding: BuildingListItemBinding) :
         RecyclerView.ViewHolder(binding.root), View.OnClickListener {
-
-        val container = binding.root
 
         init {
             this.binding.root.setOnClickListener(this)
