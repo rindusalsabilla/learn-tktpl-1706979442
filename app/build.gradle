@@ -7,7 +7,6 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
-    ndkVersion '22.0.6917172-rc1'
     defaultConfig {
         applicationId "id.ac.ui.cs.mobileprogramming.rindu.mylab"
         minSdkVersion 19
@@ -26,12 +25,6 @@ android {
 
     dataBinding {
         enabled = true;
-    }
-
-    externalNativeBuild {
-        ndkBuild {
-            path file('src/main/jni/Android.mk')
-        }
     }
 
 }
