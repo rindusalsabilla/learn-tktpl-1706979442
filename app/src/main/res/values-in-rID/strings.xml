@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lokalisasi Aplikasi</string>
+    <string name="welcome">Mari lakukan Lokalisasi Android untuk mendapatkan pasar yang lebih besar</string>
+    <string name="btn">Klik Saya!</string>
+    <string name="btn_clicked">Semoga Harimu Indah</string>
+</resources>
+
+

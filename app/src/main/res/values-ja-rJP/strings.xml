@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">アプリケーションのローカリゼーション</string>
+    <string name="welcome">より大きな市場を獲得するためにAndroidのローカリゼーションを行いましょう</string>
+    <string name="btn">私をクリックしてください</string>
+    <string name="btn_clicked">ごきげんよう</string>
+</resources>
+
+
+

@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">My Project</string>
-    <string name="welcome">Welcome to My First Android Studio Project!</string>
+    <string name="app_name">App Localization</string>
+    <string name="welcome">Let’s do Android localization to capture a bigger market</string>
+    <string name="btn">Click Me!</string>
+    <string name="btn_clicked">Have a Nice Day</string>
 </resources>
+
+
